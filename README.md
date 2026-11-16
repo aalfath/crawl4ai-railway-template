@@ -1,3 +1,5 @@
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/crawl4ai-3?utm_medium=integration&utm_source=button&utm_campaign=crawl4ai)
+
 # Crawl4AI on Railway
 
 This repo deploys [Crawl4AI](https://github.com/unclecode/crawl4ai) **0.9.5**, the open-source web crawler that turns pages into LLM-ready Markdown, as a Railway template.
