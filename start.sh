@@ -17,6 +17,8 @@ mkdir -p "$DATA/redis" "$DATA/.crawl4ai"
 chown appuser:appuser "$DATA" "$DATA/redis" "$DATA/.crawl4ai"
 chown -R appuser:appuser "$DATA/.crawl4ai" "$DATA/redis"
 
+# supervisord stays root so it can open the container's stdout/stderr; its
+# config runs Redis and the API server as appuser.
 export HOME=/home/appuser
 cd /app
-exec runuser -u appuser -- bash /app/entrypoint.sh
+exec bash /app/entrypoint.sh
