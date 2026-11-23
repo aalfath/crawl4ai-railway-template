@@ -2,13 +2,13 @@
 
 # Crawl4AI on Railway
 
-This repo deploys [Crawl4AI](https://github.com/unclecode/crawl4ai) **0.9.5**, the open-source web crawler that turns pages into LLM-ready Markdown, as a Railway template.
+This repo deploys [Crawl4AI](https://github.com/unclecode/crawl4ai) **0.9.6**, the open-source web crawler that turns pages into LLM-ready Markdown, as a Railway template.
 
 ## What it deploys
 
 One service built from this repo's `Dockerfile`:
 
-- `FROM unclecode/crawl4ai:0.9.5@sha256:0b05666882bfb67f45d559a5b827839c54127b74aedd723f8ab338a3571b5fc9`, the official image pinned by version and digest.
+- `FROM unclecode/crawl4ai:0.9.6@sha256:4603d7c4d69769673dfa1214fa9abbcac2a874d4d9af07d784782af528b65c68`, the official image pinned by version and digest.
 - `start.sh`, a small wrapper: it makes Crawl4AI listen on Railway's `PORT`, prepares the volume and starts the image's own entrypoint. Redis and the API server run as the image's non-root `appuser`.
 - A volume at `/data` for the crawl cache (`/data/.crawl4ai`) and the in-container Redis job store (`/data/redis`).
 - A public Railway domain with the health check on `/health`.
